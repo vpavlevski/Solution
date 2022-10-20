@@ -4,10 +4,6 @@ from BirthdayBLL.person.persons import Persons
 from IO.CSVFileReader import CsvFileReader
 from configuration import MAIL_TRAP_SERVER, BIRTHDAYS_FILE_PATH, CreateEmailFromTemplate, ADMIN_EMAIL, SEVEN_DAYS
 
-#Moze da se dodade nesho da proveruva dali moze da go parsira CSV fajlo
-#dodaj da moze i JSON da vcita
-
-
 emailSender = EmailSender(MAIL_TRAP_SERVER)
 
 personArray = Persons()
