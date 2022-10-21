@@ -1,6 +1,16 @@
+from BirthdayBLL.person.PersonClass import Person
+from Utils.Collections.string_array import StringArray
+
+
 class Persons:
     def __init__(self):
         self.personArray = []
+
+    @classmethod
+    def CreatePersonArrayFromStringArray(cls, stringArray: StringArray):
+        resultArray = Persons()
+        stringArray.ForEachLine(lambda line: Person.CreateFromString(line).OnSuccess(resultArray.AddPerson).OnError(lambda errMessage : print(errMessage)))
+        return resultArray
 
     def AddPerson(self, person):
         self.personArray.append(person)
@@ -8,7 +18,7 @@ class Persons:
     def HasAny(self, callback):
         if self.Count()<=0:
             return
-        callback()
+        callback(self)
 
     def ForEachPersonHavingBirthdayIn(self, numberOfDays, callback):
         for p in self.personArray:

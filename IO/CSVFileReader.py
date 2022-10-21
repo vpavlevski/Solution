@@ -1,4 +1,6 @@
 import csv
+
+from Utils.Collections.string_array import StringArray
 from Utils.Operation import OperationResult
 
 class CsvFileReader:
@@ -18,6 +20,11 @@ class CsvFileReader:
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.isFileOpen:
             self.csvFile.close()
+
+    def GetAllLinesAsStringArray(self)->StringArray:
+        lines=[]
+        self.ForEachLine(lambda line : lines.append(line))
+        return StringArray(lines)
 
     def ForEachLine(self, callBackFunction):
         csvReader = csv.reader(self.csvFile, delimiter=',')
