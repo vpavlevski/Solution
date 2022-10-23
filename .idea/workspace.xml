@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05c46ee0-171d-4dfd-b6e7-26ffd7c7cd79" name="Changes" comment="Fix Small bugs in email message formating">
+    <list default="true" id="05c46ee0-171d-4dfd-b6e7-26ffd7c7cd79" name="Changes" comment="Refactor Function Names to follow Python Convention">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/birthday_bll/email/email.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/email/email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/birthday_bll/email/email_sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/email/email_sender.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/birthday_bll/person/person.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person/person.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/birthday_bll/person/persons.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person/persons.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/birthday_bll/person_validation/date_validation_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person_validation/date_validation_rule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/birthday_bll/person_validation/email_validation_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person_validation/email_validation_rule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/birthday_bll/person_validation/input_array_validation_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person_validation/input_array_validation_rule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/birthday_bll/person_validation/name_validation_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person_validation/name_validation_rule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_output/csv_file_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/input_output/csv_file_reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/collections/string_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/collections/string_array.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/operation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/type_adapters/date_time_adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/type_adapters/date_time_adapter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/type_utils/date_time_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/type_utils/date_time_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/validation/validation_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validation/validation_engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/validation/validation_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validation/validation_rule.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666508921047</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactor Function Names to follow Python Convention">
+      <created>1666509916728</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666509916728</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -160,7 +151,8 @@
     <MESSAGE value="Refactor DateTime type into DateTimeAdapter" />
     <MESSAGE value="Rename Modules and Classes to fit Python Convention" />
     <MESSAGE value="Fix Small bugs in email message formating" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Small bugs in email message formating" />
+    <MESSAGE value="Refactor Function Names to follow Python Convention" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor Function Names to follow Python Convention" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
