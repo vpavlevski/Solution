@@ -2,7 +2,7 @@ from datetime import datetime
 from utils.templates.date_constants import MONTH_DAY_FORMAT, YEAR_MONTH_DAY_FORMAT
 
 
-def ConvertToMonthDayDateTime(inputDateTime):
+def convert_to_month_date_time(inputDateTime):
     try:
         return datetime.strptime(inputDateTime, MONTH_DAY_FORMAT)
     except:

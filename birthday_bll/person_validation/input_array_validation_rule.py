@@ -3,5 +3,5 @@ from utils.validation.validation_rule import ValidationRule
 
 
 class InputArrayValidationRule(ValidationRule):
-    def Execute(self, parameter):
+    def execute(self, parameter):
         array_has_exactly(parameter, 3)

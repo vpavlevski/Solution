@@ -3,10 +3,10 @@ class ValidationEngine():
     def __init__(self):
         self.rules = []
 
-    def AddRule(self, validationRule):
+    def add_rule(self, validationRule):
         self.rules.append(validationRule)
         return self
 
-    def Execute(self, parameter):
+    def execute(self, parameter):
         for rule in self.rules:
-            rule.Execute(parameter)
+            rule.execute(parameter)

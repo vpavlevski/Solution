@@ -7,34 +7,34 @@ class Persons:
         self.personArray = []
 
     @classmethod
-    def CreatePersonArrayFromStringArray(cls, stringArray: StringArray):
+    def create_person_array_from_string_array(cls, stringArray: StringArray):
         resultArray = Persons()
-        stringArray.ForEachLine(lambda line: Person.CreateFromString(line).OnSuccess(resultArray.AddPerson).OnError(lambda errMessage : print(errMessage)))
+        stringArray.for_each_line(lambda line: Person.create_from_string(line).on_success(resultArray.add_person).on_error(lambda errMessage : print(errMessage)))
         return resultArray
 
-    def AddPerson(self, person):
+    def add_person(self, person):
         self.personArray.append(person)
 
-    def HasAny(self, callback):
-        if self.Count()<=0:
+    def has_any(self, callback):
+        if self.count()<=0:
             return
         callback(self)
 
-    def ForEachPersonHavingBirthdayIn(self, numberOfDays, callback):
+    def for_each_person_having_birthday_in(self, numberOfDays, callback):
         for p in self.personArray:
-            if p.HasBirthdayIn(numberOfDays):
+            if p.has_birthday_in(numberOfDays):
                 callback(p)
 
-    def GetAllPersonsExcept(self, person):
+    def get_all_persons_except(self, person):
         newPersons = Persons()
         for p in self.personArray:
             if p.UUID != person.UUID:
-                newPersons.AddPerson(p)
+                newPersons.add_person(p)
         return newPersons
 
-    def ForEachPerson(self, callback):
+    def for_each_person(self, callback):
         for p in self.personArray:
             callback(p)
 
-    def Count(self):
+    def count(self):
         return len(self.personArray)

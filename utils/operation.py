@@ -6,19 +6,19 @@ class OperationResult:
         self.message = message
 
     @classmethod
-    def CreateSuccess(self, result):
+    def create_success(self, result):
         return OperationResult(True,result,"")
 
     @classmethod
-    def CreateError(self, errorMessage):
+    def create_error(self, errorMessage):
         return OperationResult(False,None,errorMessage)
 
-    def OnSuccess(self, successCallback):
+    def on_success(self, successCallback):
         if self.success:
             successCallback(self.result)
         return self
 
-    def OnError(self, errorCallback):
+    def on_error(self, errorCallback):
         if not self.success:
             errorCallback(self.message)
         return self

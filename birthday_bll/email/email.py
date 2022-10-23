@@ -17,5 +17,5 @@ class Email:
     @property
     def Message(self): return self.message
 
-    def ToString(self):
+    def to_string(self):
         return "From: " + self.fromPerson + " To: " + self.toPerson + " Subject: " + self.subject + " Message: " + self.message

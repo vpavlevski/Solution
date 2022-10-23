@@ -4,5 +4,5 @@ from utils.validation.validation_rule import ValidationRule
 
 
 class DateValidationRule(ValidationRule):
-    def Execute(self, parameter):
+    def execute(self, parameter):
         is_valid_date_from_formats(parameter[2], DATE_FORMATS, "Birthday Date")

@@ -3,32 +3,29 @@ from datetime import datetime, timedelta
 
 from utils.guards.date_guards import CreateDateTimeFromString
 from utils.templates.date_constants import MONTH_DAY_FORMAT
-from utils.type_utils.date_time_utils import ConvertToMonthDayDateTime
+from utils.type_utils.date_time_utils import convert_to_month_date_time
 
 
 class DateTimeAdapter:
     def __init__(self, dateTime: datetime):
         self.dateTime = dateTime
 
-    @property
-    def DateTime(self): return self.dateTime
-
     @classmethod
-    def CreateFromString(cls, value: string):
+    def create_from_string(cls, value: string):
         return DateTimeAdapter(CreateDateTimeFromString(value))
 
     @classmethod
-    def Now(cls):
+    def now(cls):
         return DateTimeAdapter(datetime.now())
 
-    def ConvertToMonthDayDateTime(self):
-        return DateTimeAdapter(ConvertToMonthDayDateTime(self.dateTime.strftime(MONTH_DAY_FORMAT)))
+    def convert_to_month_day_date_time(self):
+        return DateTimeAdapter(convert_to_month_date_time(self.dateTime.strftime(MONTH_DAY_FORMAT)))
 
-    def SubtractDays(self, days):
+    def subtract_days(self, days):
         return DateTimeAdapter(self.dateTime - timedelta(days))
 
-    def SubtractDate(self, date) -> timedelta:
+    def subtract_date(self, date) -> timedelta:
         return self.dateTime - date.dateTime
 
-    def ToString(self, format):
+    def to_string(self, format):
         return self.dateTime.strftime(format)

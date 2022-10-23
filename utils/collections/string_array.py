@@ -2,9 +2,9 @@ class StringArray:
     def __init__(self, strings):
         self.array = strings
 
-    def ForEachLine(self, callback):
+    def for_each_line(self, callback):
         for line in self.array:
             callback(line)
 
-    def Count(self):
+    def count(self):
         return len(self.array)

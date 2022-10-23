@@ -11,7 +11,7 @@ class EmailSender:
     def __init__(self, emailServerSettings: EmailServerSettings):
         self.emailServerSettings = emailServerSettings
 
-    def SendEmail(self, email: Email) -> OperationResult:
+    def send_email(self, email: Email) -> OperationResult:
         sender = email.From
         receiver = email.To
 
@@ -30,11 +30,11 @@ class EmailSender:
                 with smtplib.SMTP(self.emailServerSettings.Server, self.emailServerSettings.Port) as server:
                     server.login(user, password)
                     server.sendmail(sender, receiver, msg.as_string())
-                    return OperationResult.CreateSuccess("Reminder Email was sent to: " + receiver)
+                    return OperationResult.create_success("Reminder Email was sent to: " + receiver)
             except Exception as e:
                 if i < tries - 1:
                     continue
                 else:
-                    return OperationResult.CreateError("We were unable to send email to: " + receiver)
+                    return OperationResult.create_error("We were unable to send email to: " + receiver)
             break
 

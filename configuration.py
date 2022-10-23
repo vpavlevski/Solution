@@ -13,7 +13,7 @@ SEVEN_DAYS=7
 
 def CreateEmailFromTemplate(fromEmail: string, emailPerson: Person, birthdayPerson: Person):
     return Email(fromEmail, emailPerson.Email,
-               "Birthday Reminder: {0}'s birthday on {1}".format(birthdayPerson.Name,birthdayPerson.Birthday.ToString(MONTH_DAY_FORMAT)),
+               "Birthday Reminder: {0}'s birthday on {1}".format(birthdayPerson.Name, birthdayPerson.Birthday.to_string(MONTH_DAY_FORMAT)),
                "Hi {0},\nThis is a reminder that {1} will be celebrating their birthday on {2}.\nThere are {3} days left to get a present!"
-                 .format(emailPerson.Name, birthdayPerson.Name, birthdayPerson.Birthday.ToString(MONTH_DAY_FORMAT),
-                         birthdayPerson.Birthday.ConvertToMonthDayDateTime().SubtractDate(DateTimeAdapter.Now().ConvertToMonthDayDateTime()).days))
+                 .format(emailPerson.Name, birthdayPerson.Name, birthdayPerson.Birthday.to_string(MONTH_DAY_FORMAT),
+                         birthdayPerson.Birthday.convert_to_month_day_date_time().subtract_date(DateTimeAdapter.now().convert_to_month_day_date_time()).days))

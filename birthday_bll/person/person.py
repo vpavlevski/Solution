@@ -16,7 +16,7 @@ class Person:
         self.uuid = uuid.uuid1()
         self.name = name
         self.email = email
-        self.birthdayDate = DateTimeAdapter.CreateFromString(birthday)
+        self.birthdayDate = DateTimeAdapter.create_from_string(birthday)
 
     @property
     def UUID(self):
@@ -32,24 +32,24 @@ class Person:
     def Email(self): return self.email
 
     @classmethod
-    def CreateFromString(self, line):
+    def create_from_string(self, line):
         try:
             ValidationEngine()\
-                .AddRule(InputArrayValidationRule())\
-                .AddRule(NameValidationRule())\
-                .AddRule(EmailValidationRule())\
-                .AddRule(DateValidationRule())\
-            .Execute(line)
+                .add_rule(InputArrayValidationRule())\
+                .add_rule(NameValidationRule())\
+                .add_rule(EmailValidationRule())\
+                .add_rule(DateValidationRule())\
+            .execute(line)
 
-            return OperationResult.CreateSuccess(Person(line[0].strip(),line[1].strip(),line[2].strip()))
+            return OperationResult.create_success(Person(line[0].strip(), line[1].strip(), line[2].strip()))
         except Exception as e:
-            return OperationResult.CreateError("Error: " + str(e))
+            return OperationResult.create_error("Error: " + str(e))
 
-    def HasBirthdayIn(self, numberOfDays):
-        return DateTimeAdapter.Now().ConvertToMonthDayDateTime()\
-                   .SubtractDate(self.birthdayDate.ConvertToMonthDayDateTime().SubtractDays(numberOfDays))\
+    def has_birthday_in(self, numberOfDays):
+        return DateTimeAdapter.now().convert_to_month_day_date_time()\
+                   .subtract_date(self.birthdayDate.convert_to_month_day_date_time().subtract_days(numberOfDays))\
                    .days==0
 
-    def ToString(self):
-        return "Name: " + str(self.name) + " Email: " + str(self.email) + " Birthday: " + self.birthdayDate.ToString(YEAR_MONTH_DAY_FORMAT)
+    def to_string(self):
+        return "Name: " + str(self.name) + " Email: " + str(self.email) + " Birthday: " + self.birthdayDate.to_string(YEAR_MONTH_DAY_FORMAT)
 
