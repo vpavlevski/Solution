@@ -1,10 +1,8 @@
 import string
-from datetime import datetime
 
 from BirthdayBLL.email.email import Email
 from BirthdayBLL.person.PersonClass import Person
-from Utils.Templates.date_constants import MONTH_DAY_FORMAT
-from Utils.TypeUtils.DateTimeUtils import GetDaysBetweenTwoDates, ConvertToMonthDayDateTime
+from Utils.TypeAdapters.date_time_adapter import DateTimeAdapter
 from BirthdayBLL.email.email_server_settings import EmailServerSettings
 
 MAIL_TRAP_SERVER = EmailServerSettings("smtp.mailtrap.io", 2525, "bc0ec192e22a2a", "3b4105b5961092", 3)
@@ -17,5 +15,4 @@ def CreateEmailFromTemplate(fromEmail: string, emailPerson: Person, birthdayPers
                "Birthday Reminder: {0}'s birthday on {1}".format(birthdayPerson.Name,birthdayPerson.Birthday),
                "Hi {0},\nThis is a reminder that {1} will be celebrating their birthday on {2}.\nThere are {3} days left to get a present!"
                  .format(emailPerson.Name, birthdayPerson.Name, birthdayPerson.Birthday,
-                         GetDaysBetweenTwoDates(ConvertToMonthDayDateTime(datetime.now().strftime(MONTH_DAY_FORMAT))
-                                                , ConvertToMonthDayDateTime(birthdayPerson.Birthday))))
+                         DateTimeAdapter.Now().ConvertToMonthDayDateTime().SubtractDate(birthdayPerson.Birthday).days))

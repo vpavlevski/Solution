@@ -1,7 +1,25 @@
+import string
 from datetime import datetime
 
+from Utils.Templates.date_constants import DATE_FORMATS
 
-def is_valid_date_format(parameter, format, parameterName):
+
+def CreateDateTimeFromString(value: string)->datetime:
+    for dateFormat in DATE_FORMATS:
+        try:
+            return datetime.strptime(value,dateFormat)
+        except:
+            pass
+    raise ValueError("Incorrect DateTime Format")
+
+def is_valid_date_format(parameter, format, parameterName)->bool:
+    try:
+        try_parse_date_format(parameter, format, parameterName)
+        return True
+    except:
+        return False
+
+def try_parse_date_format(parameter, format, parameterName):
     try:
         datetime.strptime(parameter.strip(), format)
         return

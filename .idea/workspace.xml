@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05c46ee0-171d-4dfd-b6e7-26ffd7c7cd79" name="Changes" comment="Remove Comments">
-      <change afterPath="$PROJECT_DIR$/Utils/Collections/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils/Collections/string_array.py" afterDir="false" />
+    <list default="true" id="05c46ee0-171d-4dfd-b6e7-26ffd7c7cd79" name="Changes" comment="Refactor main code to improve readability">
+      <change afterPath="$PROJECT_DIR$/Utils/TypeAdapters/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils/TypeAdapters/date_time_adapter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/person/persons.py" beforeDir="false" afterPath="$PROJECT_DIR$/BirthdayBLL/person/persons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BirthdayBLL/person/PersonClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BirthdayBLL/person/PersonClass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Birthdays.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Birthdays.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/CSVFileReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/IO/CSVFileReader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Guards/date_guards.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Guards/date_guards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,8 +96,18 @@
       <option name="project" value="LOCAL" />
       <updated>1666257999947</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactor main code to improve readability">
+      <created>1666372148733</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666372148733</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -114,6 +124,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Remove Comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove Comments" />
+    <MESSAGE value="Refactor main code to improve readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor main code to improve readability" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,13 +1,12 @@
 import uuid
-from datetime import timedelta, datetime
 
 from BirthdayBLL.person_validation.date_validation_rule import DateValidationRule
 from BirthdayBLL.person_validation.email_validation_rule import EmailValidationRule
 from BirthdayBLL.person_validation.input_array_validation_rule import InputArrayValidationRule
 from BirthdayBLL.person_validation.name_validation_rule import NameValidationRule
 from Utils.Operation import OperationResult
-from Utils.Templates.date_constants import MONTH_DAY_FORMAT
-from Utils.TypeUtils.DateTimeUtils import ConvertToMonthDayDateTime
+from Utils.Templates.date_constants import YEAR_MONTH_DAY_FORMAT
+from Utils.TypeAdapters.date_time_adapter import DateTimeAdapter
 from Utils.Validation.validation_engine import ValidationEngine
 
 
@@ -17,7 +16,7 @@ class Person:
         self.uuid = uuid.uuid1()
         self.name = name
         self.email = email
-        self.birthday = birthday
+        self.birthdayDate = DateTimeAdapter.CreateFromString(birthday)
 
     @property
     def UUID(self):
@@ -27,7 +26,7 @@ class Person:
     def Name(self): return self.name
 
     @property
-    def Birthday(self): return self.birthday
+    def Birthday(self)->DateTimeAdapter: return self.birthdayDate
 
     @property
     def Email(self): return self.email
@@ -47,14 +46,10 @@ class Person:
             return OperationResult.CreateError("Error: " + str(e))
 
     def HasBirthdayIn(self, numberOfDays):
-        birthday = ConvertToMonthDayDateTime(self.birthday)
-
-        sendReminderAt = birthday - timedelta(numberOfDays)
-        currentDate = datetime.strptime(datetime.now().strftime(MONTH_DAY_FORMAT), MONTH_DAY_FORMAT)
-
-        delta = currentDate - sendReminderAt
-        return delta.days == 0
+        return DateTimeAdapter.Now().ConvertToMonthDayDateTime()\
+                   .SubtractDate(self.birthdayDate.ConvertToMonthDayDateTime().SubtractDays(numberOfDays))\
+                   .days==0
 
     def ToString(self):
-        return "Name: " + str(self.name) + " Email: " + str(self.email) + " Birthday: " + str(self.birthday)
+        return "Name: " + str(self.name) + " Email: " + str(self.email) + " Birthday: " + self.birthdayDate.ToString(YEAR_MONTH_DAY_FORMAT)
 
