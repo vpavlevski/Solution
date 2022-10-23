@@ -1,7 +1,7 @@
 import csv
 
-from Utils.Collections.string_array import StringArray
-from Utils.Operation import OperationResult
+from utils.collections.string_array import StringArray
+from utils.operation import OperationResult
 
 class CsvFileReader:
 

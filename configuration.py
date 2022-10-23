@@ -1,9 +1,9 @@
 import string
 
-from BirthdayBLL.email.email import Email
-from BirthdayBLL.person.PersonClass import Person
-from Utils.TypeAdapters.date_time_adapter import DateTimeAdapter
-from BirthdayBLL.email.email_server_settings import EmailServerSettings
+from birthday_bll.email.email import Email
+from birthday_bll.person.person import Person
+from utils.type_adapters.date_time_adapter import DateTimeAdapter
+from birthday_bll.email.email_server_settings import EmailServerSettings
 
 MAIL_TRAP_SERVER = EmailServerSettings("smtp.mailtrap.io", 2525, "bc0ec192e22a2a", "3b4105b5961092", 3)
 BIRTHDAYS_FILE_PATH = "./Birthdays.csv"

@@ -1,10 +1,10 @@
 import smtplib
 
-from BirthdayBLL.email.email import Email
-from BirthdayBLL.email.email_server_settings import EmailServerSettings
+from birthday_bll.email.email import Email
+from birthday_bll.email.email_server_settings import EmailServerSettings
 from email.mime.text import MIMEText
 
-from Utils.Operation import OperationResult
+from utils.operation import OperationResult
 
 
 class EmailSender:

@@ -1,7 +1,7 @@
 import string
 from datetime import datetime
 
-from Utils.Templates.date_constants import DATE_FORMATS
+from utils.templates.date_constants import DATE_FORMATS
 
 
 def CreateDateTimeFromString(value: string)->datetime:

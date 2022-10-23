@@ -1,6 +1,6 @@
-from BirthdayBLL.email.email_sender import EmailSender
-from BirthdayBLL.person.persons import Persons
-from IO.CSVFileReader import CsvFileReader
+from birthday_bll.email.email_sender import EmailSender
+from birthday_bll.person.persons import Persons
+from io.csv_file_reader import CsvFileReader
 from configuration import MAIL_TRAP_SERVER, BIRTHDAYS_FILE_PATH, CreateEmailFromTemplate, ADMIN_EMAIL, SEVEN_DAYS
 
 emailSender = EmailSender(MAIL_TRAP_SERVER)

@@ -1,5 +1,5 @@
-from BirthdayBLL.person.PersonClass import Person
-from Utils.Collections.string_array import StringArray
+from birthday_bll.person.person import Person
+from utils.collections.string_array import StringArray
 
 
 class Persons:

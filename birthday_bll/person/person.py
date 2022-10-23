@@ -1,13 +1,13 @@
 import uuid
 
-from BirthdayBLL.person_validation.date_validation_rule import DateValidationRule
-from BirthdayBLL.person_validation.email_validation_rule import EmailValidationRule
-from BirthdayBLL.person_validation.input_array_validation_rule import InputArrayValidationRule
-from BirthdayBLL.person_validation.name_validation_rule import NameValidationRule
-from Utils.Operation import OperationResult
-from Utils.Templates.date_constants import YEAR_MONTH_DAY_FORMAT
-from Utils.TypeAdapters.date_time_adapter import DateTimeAdapter
-from Utils.Validation.validation_engine import ValidationEngine
+from birthday_bll.person_validation.date_validation_rule import DateValidationRule
+from birthday_bll.person_validation.email_validation_rule import EmailValidationRule
+from birthday_bll.person_validation.input_array_validation_rule import InputArrayValidationRule
+from birthday_bll.person_validation.name_validation_rule import NameValidationRule
+from utils.operation import OperationResult
+from utils.templates.date_constants import YEAR_MONTH_DAY_FORMAT
+from utils.type_adapters.date_time_adapter import DateTimeAdapter
+from utils.validation.validation_engine import ValidationEngine
 
 
 class Person:

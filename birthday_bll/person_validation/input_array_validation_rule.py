@@ -1,5 +1,5 @@
-from Utils.Guards.array_guards import array_has_exactly
-from Utils.Validation.validation_rule import ValidationRule
+from utils.guards.array_guards import array_has_exactly
+from utils.validation.validation_rule import ValidationRule
 
 
 class InputArrayValidationRule(ValidationRule):
