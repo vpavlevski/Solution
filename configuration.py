@@ -2,6 +2,7 @@ import string
 
 from birthday_bll.email.email import Email
 from birthday_bll.person.person import Person
+from utils.templates.date_constants import MONTH_DAY_FORMAT
 from utils.type_adapters.date_time_adapter import DateTimeAdapter
 from birthday_bll.email.email_server_settings import EmailServerSettings
 
@@ -12,7 +13,7 @@ SEVEN_DAYS=7
 
 def CreateEmailFromTemplate(fromEmail: string, emailPerson: Person, birthdayPerson: Person):
     return Email(fromEmail, emailPerson.Email,
-               "Birthday Reminder: {0}'s birthday on {1}".format(birthdayPerson.Name,birthdayPerson.Birthday),
+               "Birthday Reminder: {0}'s birthday on {1}".format(birthdayPerson.Name,birthdayPerson.Birthday.ToString(MONTH_DAY_FORMAT)),
                "Hi {0},\nThis is a reminder that {1} will be celebrating their birthday on {2}.\nThere are {3} days left to get a present!"
-                 .format(emailPerson.Name, birthdayPerson.Name, birthdayPerson.Birthday,
-                         DateTimeAdapter.Now().ConvertToMonthDayDateTime().SubtractDate(birthdayPerson.Birthday).days))
+                 .format(emailPerson.Name, birthdayPerson.Name, birthdayPerson.Birthday.ToString(MONTH_DAY_FORMAT),
+                         birthdayPerson.Birthday.ConvertToMonthDayDateTime().SubtractDate(DateTimeAdapter.Now().ConvertToMonthDayDateTime()).days))

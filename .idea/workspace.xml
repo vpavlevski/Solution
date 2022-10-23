@@ -1,41 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05c46ee0-171d-4dfd-b6e7-26ffd7c7cd79" name="Changes" comment="Refactor DateTime type into DateTimeAdapter">
+    <list default="true" id="05c46ee0-171d-4dfd-b6e7-26ffd7c7cd79" name="Changes" comment="Rename Modules and Classes to fit Python Convention">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/email/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/email/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/email/email.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/email/email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/email/email_sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/email/email_sender.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/email/email_server_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/email/email_server_settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/person/PersonClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person/person.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/person/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/person/persons.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person/persons.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/person_validation/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person_validation/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/person_validation/date_validation_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person_validation/date_validation_rule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/person_validation/email_validation_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person_validation/email_validation_rule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/person_validation/input_array_validation_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person_validation/input_array_validation_rule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BirthdayBLL/person_validation/name_validation_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_bll/person_validation/name_validation_rule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/CSVFileReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/io/csv_file_reader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/io/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Collections/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Collections/string_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/collections/string_array.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Guards/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/collections/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Guards/array_guards.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/guards/array_guards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Guards/date_guards.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/guards/date_guards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Guards/string_guards.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/guards/string_guards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/operation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Templates/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/guards/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Templates/date_constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/templates/date_constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/TypeAdapters/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/templates/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/TypeAdapters/date_time_adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/type_adapters/date_time_adapter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/TypeUtils/DateTimeUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/type_utils/date_time_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/TypeUtils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/type_adapters/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Validation/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/type_utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Validation/validation_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validation/validation_engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Validation/validation_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validation/validation_rule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validation/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/io/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/input_output/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/io/csv_file_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/input_output/csv_file_reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666507395548</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Rename Modules and Classes to fit Python Convention">
+      <created>1666508276578</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666508276578</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -161,10 +138,18 @@
     <MESSAGE value="Remove Comments" />
     <MESSAGE value="Refactor main code to improve readability" />
     <MESSAGE value="Refactor DateTime type into DateTimeAdapter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor DateTime type into DateTimeAdapter" />
+    <MESSAGE value="Rename Modules and Classes to fit Python Convention" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename Modules and Classes to fit Python Convention" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/configuration.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
